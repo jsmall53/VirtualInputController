@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 
 namespace VirtualInputController.NativeInput
 {
-    public class NativeInputDefines
-    {
-        internal struct INPUT
+
+#pragma warning disable CS0649
+    internal struct INPUT
         {
             public UInt32 type;
             public MOUSEKEYBDHARDWAREINPUT Data;
@@ -28,7 +28,6 @@ namespace VirtualInputController.NativeInput
             public HARDWAREINPUT hardware;
         }
 
-#pragma warning disable CS0649
         internal struct MOUSEINPUT
         {
             public Int32 x;
@@ -55,5 +54,5 @@ namespace VirtualInputController.NativeInput
             public UInt16 ParamH;
         }
 #pragma warning restore CS0649
-    }
+
 }

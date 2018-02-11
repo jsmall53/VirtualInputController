@@ -10,6 +10,6 @@ namespace VirtualInputController.NativeInput
     class NativeInput
     {
         [DllImport("User32.dll")]
-        public static extern UInt32 SendInput(UInt32 numInputs, NativeInputDefines.INPUT[] inputs, Int32 size);
+        public static extern UInt32 SendInput(UInt32 numInputs, INPUT[] inputs, Int32 size);
     }
 }
