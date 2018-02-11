@@ -12,12 +12,12 @@ namespace VirtualInputController
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main()
+        static void Main(string[] args)
         {
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new VirtualInputController()
             };
             ServiceBase.Run(ServicesToRun);
         }
