@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualInputController", "VirtualInputController\VirtualInputController.csproj", "{3A64A5EE-FAC2-4623-99EE-3561C7EB2ED3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualInputController.Test", "VirtualInputController.Test\VirtualInputController.Test.csproj", "{1E4308FF-9A91-4ACC-B8DC-2A9AF5C6F4EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3A64A5EE-FAC2-4623-99EE-3561C7EB2ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A64A5EE-FAC2-4623-99EE-3561C7EB2ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A64A5EE-FAC2-4623-99EE-3561C7EB2ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E4308FF-9A91-4ACC-B8DC-2A9AF5C6F4EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4308FF-9A91-4ACC-B8DC-2A9AF5C6F4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4308FF-9A91-4ACC-B8DC-2A9AF5C6F4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4308FF-9A91-4ACC-B8DC-2A9AF5C6F4EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
