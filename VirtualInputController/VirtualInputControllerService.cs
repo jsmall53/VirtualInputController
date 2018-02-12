@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace VirtualInputController
 {
-    public partial class VirtualInputController : ServiceBase
+    public partial class VirtualInputControllerService : ServiceBase
     {
-        public VirtualInputController()
+        public VirtualInputControllerService()
         {
             InitializeComponent();
             InitEventLog();

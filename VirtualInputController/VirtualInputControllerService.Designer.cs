@@ -1,6 +1,6 @@
 ﻿namespace VirtualInputController
 {
-    partial class VirtualInputController
+    partial class VirtualInputControllerService
     {
         /// <summary> 
         /// Required designer variable.

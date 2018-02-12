@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceProcess;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Practices.Unity;
 
 namespace VirtualInputController
 {
@@ -17,9 +17,11 @@ namespace VirtualInputController
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new VirtualInputController()
+                new VirtualInputControllerService()
             };
             ServiceBase.Run(ServicesToRun);
         }
+
+
     }
 }
