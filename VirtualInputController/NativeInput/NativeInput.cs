@@ -8,7 +8,7 @@ using NLog;
 
 namespace VirtualInputController.NativeInput
 {
-    public class NativeInput
+    public static class NativeInput
     {
         public static int SendInput(INPUT[] inputs)
         {

@@ -20,6 +20,7 @@ namespace VirtualInputController
                 new VirtualInputControllerService()
             };
             ServiceBase.Run(ServicesToRun);
+            Logger logger = new Logger("VirtualInputController");
         }
 
 
