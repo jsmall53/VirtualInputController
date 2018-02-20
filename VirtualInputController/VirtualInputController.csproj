@@ -93,8 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Input\IInput.cs" />
-    <Compile Include="Input\Input.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="NativeInput\NativeInput.cs" />
     <Compile Include="NativeInput\NativeInput.Test.cs">
