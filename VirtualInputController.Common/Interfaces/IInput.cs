@@ -12,5 +12,6 @@ namespace VirtualInputController.Common.Interfaces
     public interface IInput
     {
         UInt16 Value { get; }
+        bool IsPressed { get; set; }
     }
 }
