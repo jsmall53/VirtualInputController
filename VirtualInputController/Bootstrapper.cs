@@ -1,8 +1,10 @@
 ﻿using Microsoft.Practices.Unity;
 using Unity;
+using Unity.Lifetime;
 using NLog;
 using VirtualInputController.Common;
-using VirtualInputController.Common.Models.Factory;
+using VirtualInputController.Factory;
+using VirtualInputController.Dispatcher;
 
 namespace VirtualInputController
 {
@@ -14,11 +16,13 @@ namespace VirtualInputController
         public Bootstrapper()
         {
             container = new UnityContainer();
+            ConfigureContainer();
         }
 
         public void ConfigureContainer()
         {
-            container.RegisterType<IInputFactory, InputFactory>();
+            container.RegisterType<IInputFactory, InputFactory>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IInputDispatcher, InputDispatcher>(new ContainerControlledLifetimeManager());
         }
     }
 }

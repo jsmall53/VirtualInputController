@@ -98,6 +98,8 @@
     <Compile Include="Dispatcher\InputDispatcher.Test.cs">
       <DependentUpon>InputDispatcher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factory\IInputFactory.cs" />
+    <Compile Include="Factory\InputFactory.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="NativeInput\NativeInput.cs" />
     <Compile Include="NativeInput\NativeInput.Test.cs">

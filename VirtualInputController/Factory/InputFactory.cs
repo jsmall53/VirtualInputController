@@ -14,7 +14,7 @@ namespace VirtualInputController.Factory
     {
         public IInput CreateInput(ushort keyValue)
         {
-            return new Input();
+            return new Input(keyValue);
         }
     }
 }

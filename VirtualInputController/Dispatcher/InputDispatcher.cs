@@ -14,11 +14,9 @@ namespace VirtualInputController.Dispatcher
 {
     public class InputDispatcher : IInputDispatcher
     {
-        private ILogger _logger;
-
-        public InputDispatcher(ILogger logger)
+        public InputDispatcher()
         {
-            _logger = logger;
+
         }
 
         public async Task<int> SendInputsAsync(params IInput[] inputs)
@@ -27,7 +25,8 @@ namespace VirtualInputController.Dispatcher
             return await Task.Run(() => NativeInput.NativeInput.SendInputs(nativeInputs));
         }
 
-        public static INPUT[] ConvertInputsToNative(IInput[] inputs)
+
+        private static INPUT[] ConvertInputsToNative(IInput[] inputs)
         {
             throw new NotImplementedException();
         }
