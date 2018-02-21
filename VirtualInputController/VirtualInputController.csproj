@@ -100,6 +100,9 @@
     </Compile>
     <Compile Include="Factory\IInputFactory.cs" />
     <Compile Include="Factory\InputFactory.cs" />
+    <Compile Include="Factory\InputFactory.Test.cs">
+      <DependentUpon>InputFactory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logger.cs" />
     <Compile Include="NativeInput\NativeInput.cs" />
     <Compile Include="NativeInput\NativeInput.Test.cs">
