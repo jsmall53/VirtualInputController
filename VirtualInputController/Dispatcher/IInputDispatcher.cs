@@ -13,6 +13,6 @@ namespace VirtualInputController.Dispatcher
 {
     public interface IInputDispatcher
     {
-        Task<int> SendInputsAsync(params IInput[] inputs);
+        Task<int> SendInputsAsync(List<IInput> inputs);
     }
 }

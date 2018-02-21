@@ -19,16 +19,26 @@ namespace VirtualInputController.Dispatcher
 
         }
 
-        public async Task<int> SendInputsAsync(params IInput[] inputs)
+        public async Task<int> SendInputsAsync(List<IInput> inputs)
         {
             INPUT[] nativeInputs = ConvertInputsToNative(inputs);
             return await Task.Run(() => NativeInput.NativeInput.SendInputs(nativeInputs));
         }
 
 
-        private static INPUT[] ConvertInputsToNative(IInput[] inputs)
+        private static INPUT[] ConvertInputsToNative(List<IInput> inputs)
         {
-            throw new NotImplementedException();
+            INPUT[] native = new INPUT[inputs.Count];
+            int index = 0;
+
+            foreach(IInput input in inputs)
+            {
+                INPUT newInput = new INPUT();
+                newInput.Data.keyboard.ScanCode = input.Value;
+                native[index] = newInput;
+            }
+
+            return native;
         }
     }
 }
