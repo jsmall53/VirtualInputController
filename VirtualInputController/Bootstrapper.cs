@@ -1,6 +1,8 @@
 ﻿using Microsoft.Practices.Unity;
 using Unity;
 using NLog;
+using VirtualInputController.Common;
+using VirtualInputController.Common.Models.Factory;
 
 namespace VirtualInputController
 {
@@ -16,7 +18,7 @@ namespace VirtualInputController
 
         public void ConfigureContainer()
         {
-
+            container.RegisterType<IInputFactory, InputFactory>();
         }
     }
 }

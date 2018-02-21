@@ -10,7 +10,7 @@ namespace VirtualInputController.NativeInput
 {
     public static class NativeInput
     {
-        public static int SendInput(INPUT[] inputs)
+        public static int SendInputs(INPUT[] inputs)
         {
             if (inputs == null || inputs.Count() == 0)
                 return 0;

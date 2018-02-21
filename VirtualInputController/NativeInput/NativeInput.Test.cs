@@ -16,7 +16,7 @@ namespace Test.VirtualInputController.NativeInputTests
             List<INPUT> inputs = new List<INPUT>();
             int successfulInputs;
 
-            successfulInputs = NativeInput.SendInput(inputs.ToArray());
+            successfulInputs = NativeInput.SendInputs(inputs.ToArray());
             Assert.Equal(0, successfulInputs);
         }
 
@@ -41,7 +41,7 @@ namespace Test.VirtualInputController.NativeInputTests
             {
                 inputs.Add(testInput);
             }
-            successfulInputs = NativeInput.SendInput(inputs.ToArray());
+            successfulInputs = NativeInput.SendInputs(inputs.ToArray());
             Assert.Equal(numInputs, successfulInputs);
         }
     }

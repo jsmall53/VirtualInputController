@@ -93,6 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Dispatcher\IInputDispatcher.cs" />
+    <Compile Include="Dispatcher\InputDispatcher.cs" />
+    <Compile Include="Dispatcher\InputDispatcher.Test.cs">
+      <DependentUpon>InputDispatcher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logger.cs" />
     <Compile Include="NativeInput\NativeInput.cs" />
     <Compile Include="NativeInput\NativeInput.Test.cs">
@@ -129,6 +134,12 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VirtualInputController.Common\VirtualInputController.Common.csproj">
+      <Project>{a44c2067-4708-4f14-be2f-f79169635cac}</Project>
+      <Name>VirtualInputController.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

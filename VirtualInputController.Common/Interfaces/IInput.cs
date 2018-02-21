@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 #endregion
 
-namespace VirtualInputController.Interfaces
+namespace VirtualInputController.Common.Interfaces
 {
-    public interface IButton
+    public interface IInput
     {
-        long Value { get; set; }
+        UInt16 Value { get; }
     }
 }

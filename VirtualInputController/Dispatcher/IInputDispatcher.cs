@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using VirtualInputController.Common.Interfaces;
+
 #endregion
 
 namespace VirtualInputController.Dispatcher
 {
     public interface IInputDispatcher
     {
-        bool SendOneOrMoreInputs(params long[] inputs);
+        Task<int> SendInputsAsync(params IInput[] inputs);
     }
 }

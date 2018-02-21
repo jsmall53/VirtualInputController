@@ -5,19 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VirtualInputController.Common.Interfaces;
+using VirtualInputController.Common.Models;
 #endregion
 
-namespace VirtualInputController.Common.Models
+namespace VirtualInputController.Factory
 {
-    public class Input : IInput
+    public class InputFactory : IInputFactory
     {
-        private ushort _value;
-
-        public Input(ushort value)
+        public IInput CreateInput(ushort keyValue)
         {
-            _value = value;
+            return new Input();
         }
-
-        public ushort Value => _value;
     }
 }
