@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using VirtualInputController.Common.Interfaces;
 using VirtualInputController.NativeInput;
 using NLog;
-
 #endregion
 
 namespace VirtualInputController.Dispatcher
@@ -21,12 +20,27 @@ namespace VirtualInputController.Dispatcher
 
         public async Task<int> SendInputsAsync(List<IInput> inputs)
         {
-            INPUT[] nativeInputs = ConvertInputsToNative(inputs);
+            if (inputs == null)
+            {
+                return 0;
+            }
+
+            INPUT[] nativeInputs;
+
+            try
+            {
+                nativeInputs = ConvertInputsToNative(inputs);
+            } catch (NullReferenceException ex)
+            {
+                nativeInputs = null;
+                ex.ToString();
+            }
+
             return await Task.Run(() => NativeInput.NativeInput.SendInputs(nativeInputs));
         }
 
 
-        private static INPUT[] ConvertInputsToNative(List<IInput> inputs)
+        public static INPUT[] ConvertInputsToNative(List<IInput> inputs)
         {
             INPUT[] native = new INPUT[inputs.Count];
             int index = 0;
@@ -36,6 +50,7 @@ namespace VirtualInputController.Dispatcher
                 INPUT newInput = new INPUT();
                 newInput.Data.keyboard.ScanCode = input.Value;
                 native[index] = newInput;
+                index++;
             }
 
             return native;
