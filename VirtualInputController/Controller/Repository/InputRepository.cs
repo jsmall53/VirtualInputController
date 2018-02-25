@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace VirtualInputController.Controller.Repository
 {
-    public class InputRepository
+    public class InputRepository : IInputRepository
     {
 
     }

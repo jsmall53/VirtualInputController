@@ -23,6 +23,11 @@ namespace VirtualInputController
             Logger logger = new Logger("VirtualInputController");
         }
 
+        public static void BootstrapService()
+        {
+            Bootstrapper bootstrapper = new Bootstrapper();
+            
+        }
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿#region Namespaces
 using Unity;
+using Unity.Lifetime;
 #endregion
 
 namespace VirtualInputController.Registration

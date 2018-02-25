@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VirtualInputController.Common.Interfaces;
 using VirtualInputController.NativeInput;
+using VirtualInputController.Factory;
 using NLog;
 #endregion
 
@@ -38,7 +39,6 @@ namespace VirtualInputController.Dispatcher
 
             return await Task.Run(() => NativeInput.NativeInput.SendInputs(nativeInputs));
         }
-
 
         public static INPUT[] ConvertInputsToNative(List<IInput> inputs)
         {

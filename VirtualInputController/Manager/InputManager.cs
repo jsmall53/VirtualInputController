@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace VirtualInputController.Manager
 {
-    public class InputManager
+    public class InputManager : IInputManager
     {
 
     }
