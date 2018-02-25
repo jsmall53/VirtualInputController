@@ -5,24 +5,25 @@ using NLog;
 using VirtualInputController.Common;
 using VirtualInputController.Factory;
 using VirtualInputController.Dispatcher;
+using VirtualInputController.Registration;
 
 namespace VirtualInputController
 {
     public class Bootstrapper
     {
-        public readonly UnityContainer container;
+        private static readonly UnityContainer container = new UnityContainer();
         //IoC stuff goes here
 
         public Bootstrapper()
         {
-            container = new UnityContainer();
-            ConfigureContainer();
+            Container = container;
         }
 
-        public void ConfigureContainer()
+        public UnityContainer Container { get; private set; }
+
+        private void BootstrapApplication()
         {
-            container.RegisterType<IInputFactory, InputFactory>(new ContainerControlledLifetimeManager());
-            container.RegisterType<IInputDispatcher, InputDispatcher>(new ContainerControlledLifetimeManager());
+            RegistrationFactory.BootstrapApplication(container);
         }
     }
 }
