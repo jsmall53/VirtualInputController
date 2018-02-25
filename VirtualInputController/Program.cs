@@ -14,6 +14,9 @@ namespace VirtualInputController
         /// </summary>
         static void Main(string[] args)
         {
+            //TODO; Figure out the proper order of events when initializing a service.
+            BootstrapService();
+
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
@@ -23,7 +26,7 @@ namespace VirtualInputController
             Logger logger = new Logger("VirtualInputController");
         }
 
-        public static void BootstrapService()
+        private static void BootstrapService()
         {
             Bootstrapper bootstrapper = new Bootstrapper();
             

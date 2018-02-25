@@ -12,14 +12,13 @@ namespace VirtualInputController
     public class Bootstrapper
     {
         private static readonly UnityContainer container = new UnityContainer();
-        //IoC stuff goes here
 
         public Bootstrapper()
         {
-            Container = container;
+            BootstrapApplication();
         }
 
-        public UnityContainer Container { get; private set; }
+        public static UnityContainer Container { get => container; }
 
         private void BootstrapApplication()
         {
