@@ -13,15 +13,19 @@ namespace VirtualInputController.Common.Models
     {
         private ushort _value;
 
+        public ushort Value => _value;
+        public long ID { get; set; }
+        public bool IsPressed { get; set; }
+        
+
         public Input(ushort value)
         {
             _value = value;
             IsPressed = false;
         }
 
-        public ushort Value => _value;
+        
 
-        public bool IsPressed { get; set; }
-        public long ID { get; set; }
+        
     }
 }

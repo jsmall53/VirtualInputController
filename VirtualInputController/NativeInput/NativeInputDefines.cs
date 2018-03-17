@@ -9,8 +9,8 @@ namespace VirtualInputController.NativeInput
 {
     public static class InputConstants
     {
-        public const UInt32 PRESS_INPUT = 0x0008 & 0x0000;
-        public const UInt32 RELEASE_INPUT = 0x0008 & 0x0002;
+        public const UInt32 PRESS_INPUT = 0x0008 | 0x0000;
+        public const UInt32 RELEASE_INPUT = 0x0008 | 0x0002;
     }
 
 #pragma warning disable CS0649
