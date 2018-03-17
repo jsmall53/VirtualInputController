@@ -21,29 +21,6 @@ namespace Test.VirtualInputController.DispatcherTests
         }
 
         [Fact]
-        public void ConvertInputsToNativeNotNull()
-        {
-            INPUT[] nativeInputs = InputDispatcher.ConvertInputsToNative(fixture.InputList);
-            Assert.NotNull(nativeInputs);
-        }
-
-        [Fact]
-        public void ConvertInputsToNativeNotEmpty()
-        {
-            INPUT[] nativeInputs = InputDispatcher.ConvertInputsToNative(fixture.InputList);
-            Assert.NotEmpty(nativeInputs);
-        }
-
-        [Fact]
-        public void ConvertInputsToNativeValues()
-        {
-            INPUT[] nativeInputs = InputDispatcher.ConvertInputsToNative(fixture.InputList);
-            Assert.Equal(fixture.InputList[0].Value, nativeInputs[0].Data.keyboard.ScanCode);
-            Assert.Equal(fixture.InputList[1].Value, nativeInputs[1].Data.keyboard.ScanCode);
-            Assert.Equal(fixture.InputList[2].Value, nativeInputs[2].Data.keyboard.ScanCode);
-        }
-
-        [Fact]
         public void SendInputsAsyncNullList()
         {
             var result = fixture.InputDispatcher.SendInputsAsync(null);
